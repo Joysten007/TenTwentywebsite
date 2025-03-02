@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for carousel */
+.slide-transition {
+  transition: opacity 1s ease-in-out;
+}
+
+.zoom-effect {
+  transition: transform 5s ease;
+}
+
+.zoom-effect.active {
+  transform: scale(1.05);
+}

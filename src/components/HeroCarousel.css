@@ -1,0 +1,239 @@
+/* HeroCarousel.css */
+
+/* Main container */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 5s ease;
+}
+
+.zoom-active {
+  transform: scale(1.05);
+}
+
+/* Content overlay */
+.content-overlay {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  left: 110px;
+  /* right: 0; */
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  text-align: left;
+  color: white;
+  padding: 0 16px;
+}
+
+.headline {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #f4f5f7;
+  /* margin-bottom: 2rem; */
+}
+
+.cta-button {
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Thumbnail indicator */
+.thumbnail-container {
+  position: absolute;
+  /* left: 2rem; */
+  left: 135px;
+  bottom: 2rem;
+  z-index: 20;
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(17, 24, 39, 0.7);
+  padding: 0.25rem;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Loader */
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loader-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  background-color: white;
+  transition: width 0.1s linear;
+}
+
+.loader-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.25rem;
+  background-color: white;
+  transition: height 0.1s linear;
+}
+
+.loader-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0.25rem;
+  background-color: white;
+  transition: width 0.1s linear;
+}
+
+.loader-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0.25rem;
+  background-color: white;
+  transition: height 0.1s linear;
+}
+
+/* Navigation dots */
+.navigation-dots {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 20;
+}
+
+.dots-wrapper {
+  display: flex;
+}
+
+.nav-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #6b7280;
+  margin-left: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-dot:first-child {
+  margin-left: 0;
+}
+
+.nav-dot-active {
+  background-color: white;
+}
+
+.nav-dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #7a7777;
+  font-size: 22px;
+}
+
+.subtitle-container {
+  margin: auto;
+  max-width: 700px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .headline {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .thumbnail-wrapper {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .thumbnail-container {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .navigation-dots {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .nav-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
