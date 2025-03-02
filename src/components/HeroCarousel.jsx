@@ -224,22 +224,6 @@ const HeroCarousel = () => {
             </div>
           </div>
         </div>
-
-        {/* Navigation dots */}
-        {/* <div className="navigation-dots">
-          <div className="dots-wrapper">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`nav-dot ${
-                  index === currentIndex ? "nav-dot-active" : ""
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div> */}
       </div>
     </div>
   );

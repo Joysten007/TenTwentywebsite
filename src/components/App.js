@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "../styles.css";
 import HeroCarousel from "./HeroCarousel";
-// import DraggableCarousel from './DraggableCarousel';
 import OurClients from "./OurClients";
 export default function App() {
   return (
@@ -28,8 +27,6 @@ export default function App() {
           <OurClients />
         </div>
       </section>
-
-      {/* You can add more sections below */}
     </div>
   );
 }
